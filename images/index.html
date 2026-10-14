@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>潘氏雪玲 | 個人介紹網站</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    colors: {
+                        gray: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #fafafa;
+            color: #171717;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Fade-in animation classes */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Clean underline hover effect */
+        .hover-underline {
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .hover-underline:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body class="selection:bg-gray-200 selection:text-black">
+
+    <nav class="fixed w-full top-0 z-50 bg-gray-50/80 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#home" class="text-sm font-medium tracking-widest uppercase hover-underline text-gray-800">P.X.L</a>
+            <div class="hidden md:flex space-x-8 text-sm text-gray-500 tracking-wide">
+                <a href="#home" class="hover:text-black transition-colors duration-300">首頁</a>
+                <a href="#about" class="hover:text-black transition-colors duration-300">關於我</a>
+                <a href="#skills" class="hover:text-black transition-colors duration-300">技能</a>
+                <a href="#contact" class="hover:text-black transition-colors duration-300">聯繫方式</a>
+            </div>
+            <!-- Mobile Menu Button (Simplified for Minimalist design - hidden visually, functional on scroll) -->
+        </div>
+    </nav>
+
+    <main class="w-full">
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+            <div class="text-center fade-in-section">
+                <p class="text-sm md:text-base text-gray-400 tracking-[0.2em] mb-4">Welcome</p>
+                <h1 class="text-4xl md:text-6xl font-light text-gray-900 tracking-widest mb-8">潘氏雪玲</h1>
+                <div class="w-12 h-[1px] bg-gray-300 mx-auto mb-8"></div>
+                <p class="text-base md:text-lg text-gray-500 font-light max-w-md mx-auto leading-relaxed">
+                    喜歡簡單生活，<br class="md:hidden">也喜歡認真對待每一件事。
+                </p>
+            </div>
+        </section>
+
+        <section id="about" class="py-32 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-16 md:gap-24 fade-in-section">
+                    <!-- Minimalist Profile Photo Placeholder -->
+                    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center flex-shrink-0 relative overflow-hidden group">
+                        <span class="text-gray-300 font-light tracking-widest text-sm group-hover:opacity-0 transition-opacity duration-300">PHOTO</span>
+                        <!-- Abstract minimal shape as fallback decoration -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-50 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    
+                    <div class="text-center md:text-left">
+                        <h2 class="text-2xl font-light tracking-widest mb-6 text-gray-800">關於我</h2>
+                        <p class="text-gray-500 leading-relaxed font-light mb-8 max-w-lg">
+                            你好，我是潘氏雪玲。目前就讀於<strong>開南大學資管系</strong>。我崇尚極簡主義，相信在繁雜的世界中保持內心的平靜與專注是最重要的。
+                        </p>
+                        
+                        <div class="mt-8">
+                            <h3 class="text-xs font-medium text-gray-400 tracking-[0.2em] uppercase mb-4">我的興趣</h3>
+                            <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-600 font-light">
+                                <span class="flex items-center gap-2"><span class="w-1 h-1 bg-gray-300 rounded-full"></span>讀書</span>
+                                <span class="flex items-center gap-2"><span class="w-1 h-1 bg-gray-300 rounded-full"></span>睡覺</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-32 px-6 bg-gray-50">
+            <div class="max-w-4xl mx-auto text-center fade-in-section">
+                <h2 class="text-2xl font-light tracking-widest mb-12 text-gray-800">專業技能</h2>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <!-- Elegant minimalist tags -->
+                    <div class="px-8 py-3 border border-gray-200 bg-white rounded-full text-gray-700 tracking-widest text-sm font-light hover:border-gray-400 hover:shadow-sm transition-all duration-300 cursor-default">
+                        寫代碼
+                    </div>
+                    <div class="px-8 py-3 border border-gray-200 bg-white rounded-full text-gray-700 tracking-widest text-sm font-light hover:border-gray-400 hover:shadow-sm transition-all duration-300 cursor-default">
+                        微積分
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-32 px-6 bg-white min-h-[60vh] flex flex-col justify-center">
+            <div class="max-w-5xl mx-auto text-center fade-in-section w-full">
+                <h2 class="text-2xl font-light tracking-widest mb-16 text-gray-800">聯繫方式</h2>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 flex-wrap">
+                    <a href="tel:0978444554" class="text-gray-500 hover:text-black tracking-widest font-light transition-colors duration-300 hover-underline pb-1 flex flex-col items-center gap-2">
+                        <span class="text-xs text-gray-400 uppercase">Phone</span>
+                        0978444554
+                    </a>
+                    <a href="mailto:B11207042@gapps.knu.edu.tw" class="text-gray-500 hover:text-black tracking-widest font-light transition-colors duration-300 hover-underline pb-1 flex flex-col items-center gap-2">
+                        <span class="text-xs text-gray-400 uppercase">Email</span>
+                        B11207042@gapps.knu.edu.tw
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-black tracking-widest font-light transition-colors duration-300 hover-underline pb-1 flex flex-col items-center gap-2">
+                        <span class="text-xs text-gray-400 uppercase">Line</span>
+                        linhlinh
+                    </a>
+                    <a href="https://instagram.com/elly._p" target="_blank" class="text-gray-500 hover:text-black tracking-widest font-light transition-colors duration-300 hover-underline pb-1 flex flex-col items-center gap-2">
+                        <span class="text-xs text-gray-400 uppercase">Instagram</span>
+                        elly._p
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center bg-white border-t border-gray-50">
+        <p class="text-xs text-gray-300 tracking-[0.2em] font-light">&copy; 2026 PAN SHI XUE LING. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Setup Intersection Observer for fade-in animations on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // Trigger when 15% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Optional: Unobserve after animating once for better performance
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in-section');
+            fadeElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
